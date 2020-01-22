@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.new_layout);
 
         input1 = (EditText) findViewById(R.id.input1);
         output1 = (EditText) findViewById(R.id.output1);

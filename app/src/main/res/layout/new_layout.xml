@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:background="#E6FFE6"
+        tools:context=".MainActivity">
+    <RadioGroup
+        android:id="@+id/RadioGroup01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="211dp"
+            android:layout_height="654dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="19dp"
+            android:stretchColumns="0">
+
+            <TableRow>
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sum_"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            <EditText
+                android:id="@+id/input1"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:lines="1" />
+            </TableRow>
+
+            <TableRow>
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/result"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow>
+                android:id="@+id/r4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <EditText
+                    android:id="@+id/output1"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:inputType="none"
+                    android:lines="1" />
+            </TableRow>
+
+            <TableRow>
+                android:id="@+id/r5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                    <RadioButton
+                        android:id="@+id/vat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pvm" />
+            </TableRow>
+                    <TableRow>
+                    android:id="@+id/r7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    <RadioButton
+                        android:id="@+id/percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delta" />
+
+                    <EditText
+                    android:id="@+id/pcustom"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="bottom"
+                    android:inputType="number"
+                    android:lines="1" />
+            </TableRow>
+
+            <TableRow>
+                android:id="@+id/r6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                <Button
+                    android:id="@+id/calc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearlayoutId"
+                    android:layout_marginTop="5dp"
+                    android:onClick="onClick"
+                    android:text="@string/calc" />
+            </TableRow>
+
+        </TableLayout>
+    </RadioGroup>
+    </RelativeLayout>

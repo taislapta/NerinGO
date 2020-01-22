@@ -13,8 +13,8 @@
 
     <LinearLayout
         android:id="@+id/linearlayoutId"
-        android:layout_width="305dp"
-        android:layout_height="251dp"
+        android:layout_width="259dp"
+        android:layout_height="263dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -61,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/pvm" />
 
+
             <RadioButton
                 android:id="@+id/percent"
                 android:layout_width="wrap_content"
@@ -69,13 +70,17 @@
 
         </RadioGroup>
 
+
         <EditText
             android:id="@+id/pcustom"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:baselineAligned="false"
             android:inputType="number"
             android:lines="1" />
+
     </LinearLayout>
+
 
     <Button
         android:id="@+id/calc"

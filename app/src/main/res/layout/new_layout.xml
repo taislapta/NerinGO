@@ -7,17 +7,13 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="16dp"
-        android:background="#E6FFE6"
+        android:background="@drawable/bg"
         tools:context=".MainActivity">
-    <RadioGroup
-        android:id="@+id/RadioGroup01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+
 
         <TableLayout
-            android:layout_width="211dp"
-            android:layout_height="654dp"
+            android:layout_width="306dp"
+            android:layout_height="659dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
@@ -34,6 +30,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sum_"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
                     android:textStyle="bold" />
             </TableRow>
 
@@ -42,12 +40,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
-            <EditText
-                android:id="@+id/input1"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:inputType="number"
-                android:lines="1" />
+                <EditText
+                    android:id="@+id/input1"
+                    android:layout_width="82dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
             </TableRow>
 
             <TableRow>
@@ -60,6 +60,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/result"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
                     android:textStyle="bold" />
             </TableRow>
 
@@ -73,39 +75,59 @@
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:inputType="none"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff" />
             </TableRow>
 
             <TableRow>
+
                 android:id="@+id/r5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
+                <RadioGroup
+                    android:id="@+id/RadioGroup01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/vat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/pvm" />
-            </TableRow>
-                    <TableRow>
-                    android:id="@+id/r7"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                        android:text="@string/pvm"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
 
                     <RadioButton
                         android:id="@+id/percent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/delta" />
+                        android:text="@string/delta"
+                        android:textColor="#ffffff" />
+                </RadioGroup>
 
-                    <EditText
+                <EditText
                     android:id="@+id/pcustom"
                     android:layout_width="50dp"
                     android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/percent"
                     android:baselineAligned="false"
-                    android:gravity="bottom"
+                    android:gravity="center"
                     android:inputType="number"
-                    android:lines="1" />
+                    android:lines="1"
+                    android:textColor="#ffffff" />
+
+
+            </TableRow>
+
+            <TableRow>
+                android:id="@+id/r7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
             </TableRow>
 
             <TableRow>
@@ -115,14 +137,14 @@
 
                 <Button
                     android:id="@+id/calc"
+                    style="@android:style/Widget.Button.Inset"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/linearlayoutId"
                     android:layout_marginTop="5dp"
                     android:onClick="onClick"
                     android:text="@string/calc" />
             </TableRow>
 
         </TableLayout>
-    </RadioGroup>
+
     </RelativeLayout>

@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.TextView;
-
-import androidx.annotation.Nullable;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;

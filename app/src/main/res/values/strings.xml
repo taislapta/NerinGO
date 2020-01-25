@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">NerinGO</string>
     <string name="sum_">Enter EUR</string>
-    <string name="result">Result</string>
+    <string name="result">Total Result</string>
+    <string name="percent">Percent%</string>
     <string name="calc">Calculate</string>
-    <string name="pvm">Add VAT 21%</string>
-    <string name="delta">Add Percent%</string>
+    <string name="pvm">Add VAT%</string>
+    <string name="delta">Add Custom%</string>
 </resources>

@@ -1,6 +1,11 @@
-# NerinGO v0.3
+# NerinGO 
 Simple program to calculate VAT and custom percentage
 
+## v0.3.1 dev release
+fixed bugs on empty inputs
+apk file located in /app/release 
+
+## v.3
 Added percentage value as separate output 
 
 ## v0.2 

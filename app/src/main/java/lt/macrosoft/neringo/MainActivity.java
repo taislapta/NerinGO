@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
         delta = (RadioButton) this.findViewById(R.id.percent);
 
         calc = (Button) this.findViewById(R.id.calc);
+
     }
 
     public void onClick(View arg0) {
@@ -54,26 +55,62 @@ public class MainActivity extends Activity {
     }
 
     protected void calculateVAT(){
-        float val = Float.valueOf(input1.getText().toString());
-        percent2 = (val*vat_c);
-        val=percent2+val;
-        output1.setText(df.format(val));
-        percent1.setText(df.format(percent2));
+        //check if there are any value in Eur EditText, if yes set 0
+        if (input1.getText().toString().isEmpty()) {
+            float val = 0;
+            percent2 = 0;
+            output1.setText(df.format(val));
+            percent1.setText(df.format(percent2));
+        }
+        else {
+            float val = Float.valueOf(input1.getText().toString());
+            percent2 = (val * vat_c);
+            val = percent2 + val;
+            output1.setText(df.format(val));
+            percent1.setText(df.format(percent2));
+
+        }
+
     }
 
     protected void calculatePercent(){
-        float val = Float.valueOf(input1.getText().toString());
-        if (pcustom.getText().toString().isEmpty()) {
-            val = val;
-            percent2 = 0;
+        //check if Eur EditTExt is empty, then check if percent is empty as well
+        if (input1.getText().toString().isEmpty()) {
+            if (pcustom.getText().toString().isEmpty()) {
+                float val = 0;
+                percent2 = 0;
+                df.format(val);
+                output1.setText(df.format(val));
+                percent1.setText(df.format(percent2));
+            }
+            else {
+                //Percent EDIT text is not empty anyway result 0 as input is empty
+                float val = 0;
+                percent2 = 0;
+                df.format(val);
+                output1.setText(df.format(val));
+            }
          }
         else {
-            float val_2 = Float.valueOf(pcustom.getText().toString());
-            percent2 = (val * val_2 / 100);
-            val = percent2 + val;
+            //check ifpercent custom EditText is empty  but input Eur is not
+            if (pcustom.getText().toString().isEmpty()) {
+                float val = Float.valueOf(input1.getText().toString());
+                percent2 = 0;
+                df.format(val);
+                output1.setText(df.format(val));
+                percent1.setText(df.format(percent2));
+            }
+            else {
+                // proceed with both not empty
+                float val = Float.valueOf(input1.getText().toString());
+                float val_2 = Float.valueOf(pcustom.getText().toString());
+                percent2 = (val * val_2 / 100);
+                val = percent2 + val;
+                df.format(val);
+                output1.setText(df.format(val));
+                percent1.setText(df.format(percent2));
+            }
         }
-        df.format(val);
-        output1.setText(df.format(val));
-        percent1.setText(df.format(percent2));
+
     }
 }
